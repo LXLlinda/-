@@ -1,9 +1,9 @@
 <!doctype html public "-//w3c//dtd html 4.0 transitional//en">
 <html><head>
-<title>Static Call Graph - [STM32L431_LCD_SPI\STM32L431_LCD_SPI.axf]</title></head>
+<title>Static Call Graph - [STM32L431_PWM\STM32L431_PWM.axf]</title></head>
 <body><HR>
-<H1>Static Call Graph for image STM32L431_LCD_SPI\STM32L431_LCD_SPI.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Mon Dec 13 19:04:05 2021
+<H1>Static Call Graph for image STM32L431_PWM\STM32L431_PWM.axf</H1><HR>
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Fri Dec 10 19:37:13 2021
 <BR><P>
 <H3>Maximum Stack Usage =          0 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -323,10 +323,10 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
 
-<P><STRONG><a name="[62]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_MspInit
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GPIO_Init
+<P><STRONG><a name="[69]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_MspPostInit
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM2_Init
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
 <P><STRONG><a name="[51]"></a>_memset$wrapper</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
@@ -349,43 +349,27 @@ Global Symbols
 <P><STRONG><a name="[7]"></a>DebugMon_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32l4xx_it.o(i.DebugMon_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l431xx.o(RESET)
 </UL>
-<P><STRONG><a name="[7c]"></a>Error_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, main.o(i.Error_Handler))
-<BR><BR>[Called By]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI2_Init
+<P><STRONG><a name="[77]"></a>Error_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, main.o(i.Error_Handler))
+<BR><BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM2_Init
 </UL>
 
 <P><STRONG><a name="[53]"></a>HAL_Delay</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, stm32l4xx_hal.o(i.HAL_Delay))
 <BR><BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GPIO_Init
 </UL>
 
-<P><STRONG><a name="[63]"></a>HAL_GPIO_Init</STRONG> (Thumb, 412 bytes, Stack size 0 bytes, stm32l4xx_hal_gpio.o(i.HAL_GPIO_Init))
-<BR><BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_MspInit
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GPIO_Init
-</UL>
-
-<P><STRONG><a name="[6a]"></a>HAL_GPIO_WritePin</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32l4xx_hal_gpio.o(i.HAL_GPIO_WritePin))
-<BR><BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Write_Data
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Write_Cmd
-<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Write_2Byte
-<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Draw_ColorLine
-<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DisplayOn
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Clear
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GPIO_Init
+<P><STRONG><a name="[6a]"></a>HAL_GPIO_Init</STRONG> (Thumb, 412 bytes, Stack size 0 bytes, stm32l4xx_hal_gpio.o(i.HAL_GPIO_Init))
+<BR><BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_MspPostInit
 </UL>
 
 <P><STRONG><a name="[54]"></a>HAL_GetTick</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32l4xx_hal.o(i.HAL_GetTick))
-<BR><BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_WaitFlagStateUntilTimeout
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_WaitFifoStateUntilTimeout
-<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_Transmit
-<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
+<BR><BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
 <LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
 </UL>
 
-<P><STRONG><a name="[80]"></a>HAL_IncTick</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, stm32l4xx_hal.o(i.HAL_IncTick))
+<P><STRONG><a name="[7a]"></a>HAL_IncTick</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, stm32l4xx_hal.o(i.HAL_IncTick))
 <BR><BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
 </UL>
 
@@ -420,11 +404,11 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
 </UL>
 
-<P><STRONG><a name="[82]"></a>HAL_PWREx_ControlVoltageScaling</STRONG> (Thumb, 90 bytes, Stack size 0 bytes, stm32l4xx_hal_pwr_ex.o(i.HAL_PWREx_ControlVoltageScaling))
-<BR><BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<P><STRONG><a name="[7c]"></a>HAL_PWREx_ControlVoltageScaling</STRONG> (Thumb, 90 bytes, Stack size 0 bytes, stm32l4xx_hal_pwr_ex.o(i.HAL_PWREx_ControlVoltageScaling))
+<BR><BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
-<P><STRONG><a name="[7d]"></a>HAL_PWREx_GetVoltageRange</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32l4xx_hal_pwr_ex.o(i.HAL_PWREx_GetVoltageRange))
+<P><STRONG><a name="[79]"></a>HAL_PWREx_GetVoltageRange</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32l4xx_hal_pwr_ex.o(i.HAL_PWREx_GetVoltageRange))
 <BR><BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_SetFlashLatencyFromMSIRange
 </UL>
 
@@ -433,7 +417,7 @@ Global Symbols
 <LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
 <LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
-<BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
 <P><STRONG><a name="[5d]"></a>HAL_RCC_GetSysClockFreq</STRONG> (Thumb, 150 bytes, Stack size 0 bytes, stm32l4xx_hal_rcc.o(i.HAL_RCC_GetSysClockFreq))
@@ -447,33 +431,72 @@ Global Symbols
 <LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
 <LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 </UL>
-<BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
-</UL>
-
-<P><STRONG><a name="[60]"></a>HAL_SPI_Init</STRONG> (Thumb, 224 bytes, Stack size 0 bytes, stm32l4xx_hal_spi.o(i.HAL_SPI_Init))
-<BR><BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_MspInit
-</UL>
-<BR>[Called By]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI2_Init
-</UL>
-
-<P><STRONG><a name="[61]"></a>HAL_SPI_MspInit</STRONG> (Thumb, 112 bytes, Stack size 0 bytes, spi.o(i.HAL_SPI_MspInit))
-<BR><BR>[Calls]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
-</UL>
-<BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_Init
-</UL>
-
-<P><STRONG><a name="[64]"></a>HAL_SPI_Transmit</STRONG> (Thumb, 392 bytes, Stack size 0 bytes, stm32l4xx_hal_spi.o(i.HAL_SPI_Transmit))
-<BR><BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
-<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_EndRxTxTransaction
-</UL>
-<BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_WriteByte
+<BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 
 <P><STRONG><a name="[59]"></a>HAL_SYSTICK_Config</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, stm32l4xx_hal_cortex.o(i.HAL_SYSTICK_Config))
 <BR><BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_SetPriority
 </UL>
 <BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
+</UL>
+
+<P><STRONG><a name="[78]"></a>HAL_TIMEx_MasterConfigSynchronization</STRONG> (Thumb, 98 bytes, Stack size 0 bytes, stm32l4xx_hal_tim_ex.o(i.HAL_TIMEx_MasterConfigSynchronization))
+<BR><BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM2_Init
+</UL>
+
+<P><STRONG><a name="[60]"></a>HAL_TIM_Base_Init</STRONG> (Thumb, 98 bytes, Stack size 0 bytes, stm32l4xx_hal_tim.o(i.HAL_TIM_Base_Init))
+<BR><BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_SetConfig
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_MspInit
+</UL>
+<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM2_Init
+</UL>
+
+<P><STRONG><a name="[61]"></a>HAL_TIM_Base_MspInit</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, tim.o(i.HAL_TIM_Base_MspInit))
+<BR><BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Init
+</UL>
+
+<P><STRONG><a name="[63]"></a>HAL_TIM_ConfigClockSource</STRONG> (Thumb, 214 bytes, Stack size 0 bytes, stm32l4xx_hal_tim.o(i.HAL_TIM_ConfigClockSource))
+<BR><BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ETR_SetConfig
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_TI2_ConfigInputStage
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_TI1_ConfigInputStage
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ITRx_SetConfig
+</UL>
+<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM2_Init
+</UL>
+
+<P><STRONG><a name="[68]"></a>HAL_TIM_MspPostInit</STRONG> (Thumb, 70 bytes, Stack size 0 bytes, tim.o(i.HAL_TIM_MspPostInit))
+<BR><BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+</UL>
+<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM2_Init
+</UL>
+
+<P><STRONG><a name="[6b]"></a>HAL_TIM_PWM_ConfigChannel</STRONG> (Thumb, 286 bytes, Stack size 0 bytes, stm32l4xx_hal_tim.o(i.HAL_TIM_PWM_ConfigChannel))
+<BR><BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_OC2_SetConfig
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_OC6_SetConfig
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_OC5_SetConfig
+<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_OC4_SetConfig
+<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_OC3_SetConfig
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_OC1_SetConfig
+</UL>
+<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM2_Init
+</UL>
+
+<P><STRONG><a name="[72]"></a>HAL_TIM_PWM_Init</STRONG> (Thumb, 98 bytes, Stack size 0 bytes, stm32l4xx_hal_tim.o(i.HAL_TIM_PWM_Init))
+<BR><BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_MspInit
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Base_SetConfig
+</UL>
+<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM2_Init
+</UL>
+
+<P><STRONG><a name="[73]"></a>HAL_TIM_PWM_MspInit</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32l4xx_hal_tim.o(i.HAL_TIM_PWM_MspInit))
+<BR><BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Init
+</UL>
+
+<P><STRONG><a name="[74]"></a>HAL_TIM_PWM_Start</STRONG> (Thumb, 190 bytes, Stack size 0 bytes, stm32l4xx_hal_tim.o(i.HAL_TIM_PWM_Start))
+<BR><BR>[Calls]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_CCxChannelCmd
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[2]"></a>HardFault_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32l4xx_it.o(i.HardFault_Handler))
@@ -483,166 +506,21 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l431xx.o(RESET)
 </UL>
-<P><STRONG><a name="[66]"></a>LCD_Address_Set</STRONG> (Thumb, 82 bytes, Stack size 0 bytes, lcd_spi2_drv.o(i.LCD_Address_Set))
-<BR><BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Write_Data
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Write_Cmd
-</UL>
-<BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowChinese48x48
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowChinese32x32
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowChinese24x24
-<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowChinese16x16
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowChinese12x12
-<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowChar
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Draw_ColorPoint
-<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Draw_ColorLine
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Clear
+<P><STRONG><a name="[7d]"></a>MX_GPIO_Init</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, gpio.o(i.MX_GPIO_Init))
+<BR><BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[69]"></a>LCD_Clear</STRONG> (Thumb, 80 bytes, Stack size 0 bytes, lcd_spi2_drv.o(i.LCD_Clear))
-<BR><BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Address_Set
-<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SPI_Send
+<P><STRONG><a name="[76]"></a>MX_TIM2_Init</STRONG> (Thumb, 148 bytes, Stack size 0 bytes, tim.o(i.MX_TIM2_Init))
+<BR><BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Init
+<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_ConfigChannel
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_ConfigClockSource
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Init
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIMEx_MasterConfigSynchronization
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_MspPostInit
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
-</UL>
-
-<P><STRONG><a name="[6c]"></a>LCD_DisplayOn</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, lcd_spi2_drv.o(i.LCD_DisplayOn))
-<BR><BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-</UL>
-<BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[6d]"></a>LCD_Draw_ColorLine</STRONG> (Thumb, 238 bytes, Stack size 0 bytes, lcd_spi2_drv.o(i.LCD_Draw_ColorLine))
-<BR><BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Draw_ColorPoint
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Address_Set
-<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SPI_Send
-</UL>
-<BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[6e]"></a>LCD_Draw_ColorPoint</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, lcd_spi2_drv.o(i.LCD_Draw_ColorPoint))
-<BR><BR>[Calls]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Write_2Byte
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Address_Set
-</UL>
-<BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowChinese48x48
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowChinese32x32
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowChinese24x24
-<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowChinese16x16
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowChinese12x12
-<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Draw_ColorLine
-</UL>
-
-<P><STRONG><a name="[72]"></a>LCD_Init</STRONG> (Thumb, 400 bytes, Stack size 0 bytes, lcd_spi2_drv.o(i.LCD_Init))
-<BR><BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Write_Data
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Write_Cmd
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Clear
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Address_Set
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GPIO_Init
-</UL>
-<BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[74]"></a>LCD_ShowChar</STRONG> (Thumb, 268 bytes, Stack size 0 bytes, lcd_spi2_drv.o(i.LCD_ShowChar))
-<BR><BR>[Calls]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Write_2Byte
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Address_Set
-</UL>
-<BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowCharStr
-</UL>
-
-<P><STRONG><a name="[75]"></a>LCD_ShowCharStr</STRONG> (Thumb, 64 bytes, Stack size 0 bytes, lcd_spi2_drv.o(i.LCD_ShowCharStr))
-<BR><BR>[Calls]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowChar
-</UL>
-<BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[76]"></a>LCD_ShowChinese</STRONG> (Thumb, 166 bytes, Stack size 0 bytes, lcd_spi2_drv.o(i.LCD_ShowChinese))
-<BR><BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowChinese48x48
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowChinese32x32
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowChinese24x24
-<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowChinese16x16
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowChinese12x12
-</UL>
-<BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[78]"></a>LCD_ShowChinese12x12</STRONG> (Thumb, 244 bytes, Stack size 0 bytes, lcd_spi2_drv.o(i.LCD_ShowChinese12x12))
-<BR><BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Write_Data
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Draw_ColorPoint
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Address_Set
-</UL>
-<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowChinese
-</UL>
-
-<P><STRONG><a name="[79]"></a>LCD_ShowChinese16x16</STRONG> (Thumb, 240 bytes, Stack size 0 bytes, lcd_spi2_drv.o(i.LCD_ShowChinese16x16))
-<BR><BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Write_Data
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Draw_ColorPoint
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Address_Set
-</UL>
-<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowChinese
-</UL>
-
-<P><STRONG><a name="[7a]"></a>LCD_ShowChinese24x24</STRONG> (Thumb, 244 bytes, Stack size 0 bytes, lcd_spi2_drv.o(i.LCD_ShowChinese24x24))
-<BR><BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Write_Data
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Draw_ColorPoint
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Address_Set
-</UL>
-<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowChinese
-</UL>
-
-<P><STRONG><a name="[7b]"></a>LCD_ShowChinese32x32</STRONG> (Thumb, 240 bytes, Stack size 0 bytes, lcd_spi2_drv.o(i.LCD_ShowChinese32x32))
-<BR><BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Write_Data
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Draw_ColorPoint
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Address_Set
-</UL>
-<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowChinese
-</UL>
-
-<P><STRONG><a name="[77]"></a>LCD_ShowChinese48x48</STRONG> (Thumb, 244 bytes, Stack size 0 bytes, lcd_spi2_drv.o(i.LCD_ShowChinese48x48))
-<BR><BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Write_Data
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Draw_ColorPoint
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Address_Set
-</UL>
-<BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowChinese
-</UL>
-
-<P><STRONG><a name="[6f]"></a>LCD_Write_2Byte</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, lcd_spi2_drv.o(i.LCD_Write_2Byte))
-<BR><BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SPI_Send
-</UL>
-<BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowChar
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Draw_ColorPoint
-</UL>
-
-<P><STRONG><a name="[67]"></a>LCD_Write_Cmd</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, lcd_spi2_drv.o(i.LCD_Write_Cmd))
-<BR><BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SPI_Send
-</UL>
-<BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Address_Set
-</UL>
-
-<P><STRONG><a name="[68]"></a>LCD_Write_Data</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, lcd_spi2_drv.o(i.LCD_Write_Data))
-<BR><BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SPI_Send
-</UL>
-<BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowChinese48x48
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowChinese32x32
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowChinese24x24
-<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowChinese16x16
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowChinese12x12
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Address_Set
-</UL>
-
-<P><STRONG><a name="[71]"></a>MX_SPI2_Init</STRONG> (Thumb, 70 bytes, Stack size 0 bytes, spi.o(i.MX_SPI2_Init))
-<BR><BR>[Calls]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_Init
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Error_Handler
-</UL>
-<BR>[Called By]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_GPIO_Init
 </UL>
 
 <P><STRONG><a name="[3]"></a>MemManage_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32l4xx_it.o(i.MemManage_Handler))
@@ -662,25 +540,19 @@ Global Symbols
 <P><STRONG><a name="[8]"></a>PendSV_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32l4xx_it.o(i.PendSV_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l431xx.o(RESET)
 </UL>
-<P><STRONG><a name="[73]"></a>SPI_WriteByte</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, spi.o(i.SPI_WriteByte))
-<BR><BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_Transmit
-</UL>
-<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SPI_Send
-</UL>
-
 <P><STRONG><a name="[6]"></a>SVC_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32l4xx_it.o(i.SVC_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l431xx.o(RESET)
 </UL>
 <P><STRONG><a name="[9]"></a>SysTick_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32l4xx_it.o(i.SysTick_Handler))
-<BR><BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_IncTick
+<BR><BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_IncTick
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l431xx.o(RESET)
 </UL>
-<P><STRONG><a name="[81]"></a>SystemClock_Config</STRONG> (Thumb, 110 bytes, Stack size 0 bytes, main.o(i.SystemClock_Config))
+<P><STRONG><a name="[7b]"></a>SystemClock_Config</STRONG> (Thumb, 110 bytes, Stack size 0 bytes, main.o(i.SystemClock_Config))
 <BR><BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_ClockConfig
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PWREx_ControlVoltageScaling
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PWREx_ControlVoltageScaling
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -688,6 +560,23 @@ Global Symbols
 <P><STRONG><a name="[4b]"></a>SystemInit</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, system_stm32l4xx.o(i.SystemInit))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l431xx.o(.text)
 </UL>
+<P><STRONG><a name="[62]"></a>TIM_Base_SetConfig</STRONG> (Thumb, 94 bytes, Stack size 0 bytes, stm32l4xx_hal_tim.o(i.TIM_Base_SetConfig))
+<BR><BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Init
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_Base_Init
+</UL>
+
+<P><STRONG><a name="[75]"></a>TIM_CCxChannelCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32l4xx_hal_tim.o(i.TIM_CCxChannelCmd))
+<BR><BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Start
+</UL>
+
+<P><STRONG><a name="[64]"></a>TIM_ETR_SetConfig</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, stm32l4xx_hal_tim.o(i.TIM_ETR_SetConfig))
+<BR><BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_ConfigClockSource
+</UL>
+
+<P><STRONG><a name="[6d]"></a>TIM_OC2_SetConfig</STRONG> (Thumb, 102 bytes, Stack size 0 bytes, stm32l4xx_hal_tim.o(i.TIM_OC2_SetConfig))
+<BR><BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_ConfigChannel
+</UL>
+
 <P><STRONG><a name="[5]"></a>UsageFault_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32l4xx_it.o(i.UsageFault_Handler))
 <BR><BR>[Calls]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UsageFault_Handler
 </UL>
@@ -695,63 +584,53 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32l431xx.o(RESET)
 </UL>
-<P><STRONG><a name="[4a]"></a>main</STRONG> (Thumb, 128 bytes, Stack size 0 bytes, main.o(i.main))
-<BR><BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
+<P><STRONG><a name="[4a]"></a>main</STRONG> (Thumb, 78 bytes, Stack size 0 bytes, main.o(i.main))
+<BR><BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_TIM2_Init
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Start
+<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
 <LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
-<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowChinese
-<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowCharStr
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
-<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Draw_ColorLine
-<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DisplayOn
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Clear
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL><P>
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[70]"></a>LCD_GPIO_Init</STRONG> (Thumb, 178 bytes, Stack size 0 bytes, lcd_spi2_drv.o(i.LCD_GPIO_Init))
-<BR><BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_SPI2_Init
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
-<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_Init
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
-</UL>
-<BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
+<P><STRONG><a name="[67]"></a>TIM_ITRx_SetConfig</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32l4xx_hal_tim.o(i.TIM_ITRx_SetConfig))
+<BR><BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_ConfigClockSource
 </UL>
 
-<P><STRONG><a name="[6b]"></a>LCD_SPI_Send</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, lcd_spi2_drv.o(i.LCD_SPI_Send))
-<BR><BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_WriteByte
-</UL>
-<BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Write_Data
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Write_Cmd
-<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Write_2Byte
-<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Draw_ColorLine
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Clear
+<P><STRONG><a name="[6c]"></a>TIM_OC1_SetConfig</STRONG> (Thumb, 104 bytes, Stack size 0 bytes, stm32l4xx_hal_tim.o(i.TIM_OC1_SetConfig))
+<BR><BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_ConfigChannel
 </UL>
 
-<P><STRONG><a name="[65]"></a>SPI_EndRxTxTransaction</STRONG> (Thumb, 72 bytes, Stack size 0 bytes, stm32l4xx_hal_spi.o(i.SPI_EndRxTxTransaction))
-<BR><BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_WaitFlagStateUntilTimeout
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_WaitFifoStateUntilTimeout
-</UL>
-<BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_SPI_Transmit
+<P><STRONG><a name="[6e]"></a>TIM_OC3_SetConfig</STRONG> (Thumb, 100 bytes, Stack size 0 bytes, stm32l4xx_hal_tim.o(i.TIM_OC3_SetConfig))
+<BR><BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_ConfigChannel
 </UL>
 
-<P><STRONG><a name="[7e]"></a>SPI_WaitFifoStateUntilTimeout</STRONG> (Thumb, 196 bytes, Stack size 0 bytes, stm32l4xx_hal_spi.o(i.SPI_WaitFifoStateUntilTimeout))
-<BR><BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
-</UL>
-<BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_EndRxTxTransaction
+<P><STRONG><a name="[6f]"></a>TIM_OC4_SetConfig</STRONG> (Thumb, 80 bytes, Stack size 0 bytes, stm32l4xx_hal_tim.o(i.TIM_OC4_SetConfig))
+<BR><BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_ConfigChannel
 </UL>
 
-<P><STRONG><a name="[7f]"></a>SPI_WaitFlagStateUntilTimeout</STRONG> (Thumb, 180 bytes, Stack size 0 bytes, stm32l4xx_hal_spi.o(i.SPI_WaitFlagStateUntilTimeout))
-<BR><BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
+<P><STRONG><a name="[70]"></a>TIM_OC5_SetConfig</STRONG> (Thumb, 74 bytes, Stack size 0 bytes, stm32l4xx_hal_tim.o(i.TIM_OC5_SetConfig))
+<BR><BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_ConfigChannel
 </UL>
-<BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_EndRxTxTransaction
+
+<P><STRONG><a name="[71]"></a>TIM_OC6_SetConfig</STRONG> (Thumb, 76 bytes, Stack size 0 bytes, stm32l4xx_hal_tim.o(i.TIM_OC6_SetConfig))
+<BR><BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_ConfigChannel
+</UL>
+
+<P><STRONG><a name="[65]"></a>TIM_TI1_ConfigInputStage</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, stm32l4xx_hal_tim.o(i.TIM_TI1_ConfigInputStage))
+<BR><BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_ConfigClockSource
+</UL>
+
+<P><STRONG><a name="[66]"></a>TIM_TI2_ConfigInputStage</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, stm32l4xx_hal_tim.o(i.TIM_TI2_ConfigInputStage))
+<BR><BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_ConfigClockSource
 </UL>
 
 <P><STRONG><a name="[5f]"></a>RCC_SetFlashLatencyFromMSIRange</STRONG> (Thumb, 116 bytes, Stack size 0 bytes, stm32l4xx_hal_rcc.o(i.RCC_SetFlashLatencyFromMSIRange))
-<BR><BR>[Calls]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PWREx_GetVoltageRange
+<BR><BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_PWREx_GetVoltageRange
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_OscConfig
 </UL>
